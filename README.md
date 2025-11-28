@@ -91,7 +91,7 @@ It reflects my technical growth as a QA Engineer Junior, with strong focus on qu
 ## To run the tests:
 - Clone the repository to your local environment using SSH. Replace “username” with your GitHub username:
   ```sh
-  git clone git@github.com:username/qa-project-Urban-Grocers-app-es.git
+  git clone git@github.com:maximiliam-font/API_Test_Automation.git
   ```
 - If you don’t have them installed, install pytest and requests packages to run the tests:
   ```sh
