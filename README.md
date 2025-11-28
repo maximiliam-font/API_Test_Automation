@@ -1,9 +1,3 @@
-<h1 align="center">Urban Grocers Automation – Sprint 7 Commit</h1>
-
-<p align="center">
-  <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*xNQKHj5vR7w9AcY_bDKYYw.gif" alt="Project Logo">
-</p>
-
 <p align="center">
   <img src="https://img.shields.io/badge/STATUS-IN%20DEVELOPMENT-yellow" alt="Status">
   <img src="https://img.shields.io/badge/PYTEST-Passing-brightgreen" alt="Pytest Badge">
@@ -11,70 +5,86 @@
   <img src="https://img.shields.io/github/stars/yourusername?style=social" alt="GitHub Stars">
 </p>
 
----
-
-## 📝 Project Description
-This repository contains an **automated test suite** for validating the `Kit Name` functionality of an API.  
-The tests were designed with a **QA Engineering approach**, ensuring that both positive and negative scenarios are covered to check API robustness and compliance with expected business rules.
-
-The main objective is to validate:
-- Kit creation with valid names.
-- API responses when invalid or edge-case data is provided.
-- Error handling when mandatory parameters are missing.
-
----
-
-## 📑 Documentation
-- API documentation source: [apiDoc](https://apidocjs.com/)  
-- Test cases were designed based on the provided API specifications and QA best practices.
-
----
-
-## 🚧 Project Status
-<h4 align="center">
-🚧 Under Development 🚧
-</h4>
-
-> Some negative tests currently fail due to backend validation gaps (e.g., empty names or numeric input are accepted instead of returning 400).  
-
----
- 🎬 
 <p align="center">
-  <img src="https://i.pinimg.com/originals/79/9e/0d/799e0d7779f6ea6c3a89885ff60c55af.gif" alt="Test Execution GIF">
+  <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*xNQKHj5vR7w9AcY_bDKYYw.gif" alt="Project Logo">
 </p>
 
+## API Test Automation of Product Kit Creation
+> "Those who enforce the law must obey the law."
+
+<br/>
+In this project, I developed a complete automation workflow, technical analysis, and test design to validate the creation of product kits within the Urban Grocers API.
+The main focus was verifying the name field in the endpoint responsible for generating custom kits, ensuring business rules, data validations, and consistent server responses.
+As a QA Engineer Junior, I implemented an end-to-end testing flow that included requirement analysis, checklists, automated tests using Pytest + Requests, version control with Git/GitHub, and clear technical documentation.
+
+## 🎯 Project Objective
+Ensure that the API properly validates the name parameter when creating custom kits, covering boundary values, formats, data types, missing parameters, and error handling — guaranteeing functional reliability, backend consistency, and a stable user experience.
+
+> [!WARNING]
+>The system currently allows the creation of kits with values that do not meet the defined functional criteria.
+This defect may cause unexpected behavior in production and should be addressed with priority to avoid scalability and stability risks.
+
+## Features
+-	🔐 Dynamic user creation with automatic authToken retrieval
+- 🧪 Full automation of positive and negative cases using Pytest
+- 📦 Functional validation of the POST /api/v1/kits endpoint
+- 🛠️ Reusable helper functions ensuring scalability of the test framework
+- 📁 Professionally structured project with clean modular organization
+> [!NOTE]
+>Some backend responses showed behaviors not aligned with the functional documentation. These inconsistencies should be reviewed by the development team to prevent future regressions.
+
+## 🛠️ Technical Skills
+#### Requirements Analysis & Documentation
+- Interpretation of business rules, identification of grey areas, and creation of clear acceptance criteria.
 ---
-
-## ⚙️ Features & Tests
-The test suite covers the following scenarios:
-
-- ✅ Create kit with **1 character name** → `201`
-- ✅ Create kit with **511 characters name** → `201`
-- ❌ Attempt to create kit with **empty name** → Expected `400`
-- ❌ Attempt to create kit with **512 characters name** → Expected `400`
-- ✅ Create kit with **special characters** → `201`
-- ✅ Create kit with **leading/trailing spaces** → `201`
-- ✅ Create kit with **numeric string name** → `201`
-- ❌ Attempt to create kit with **empty request body** → Expected `400`
-- ❌ Attempt to create kit with **integer name** → Expected `400`
-
-> ℹ️ Some tests may reveal inconsistencies between expected and actual behavior.  
-> This is intentional, as it demonstrates how QA detects **bugs or missing validations** in the backend.
-
+#### Foundation QA & Testing
+- Application of core QA techniques: equivalence partitioning, boundary value analysis, positive/negative scenarios, and expected-behavior validation.
 ---
-
-## 🛠️ Technologies & Techniques
-- **Python 3.10+**
-- **Pytest** for test execution
-- **Requests** library for API calls
-- **apiDoc** for API documenta
-
+#### Technical Documentation & Traceability
+- Creation of checklists, technical README, and mapping of tests → requirements → results.
 ---
+#### Tools Used
+- `Python `
+- `Pytest `
+- `Requests `
+- `Git & GitHub ` (SSH)
+- `Local development environment `
+- `Command-line terminal `
+- `VS Code `
+> [!IMPORTANT]
+>The `POST /api/v1/kits ` endpoint lacks strong validation for certain data types, allowing atypical parameters to be accepted. This represents a functional integrity risk and must be corrected.
+
+## ⚙️ Validated Functionality
+#### ✔️ Positive Cases
+- Name with 1 character → 201
+- Name with 511 characters → 201
+- Special characters → 201
+- Leading/trailing spaces → 201
+- Numeric strings → 201
+#### ❌ Negative Cases
+- Empty name → 400
+- Name with 512 characters → 400
+- Missing parameter → 400
+- Incorrect data type (int) → 400
+
+## 📦 Skills Demonstrated
+- Requirements analysis and structured test design
+- API test automation
+- Error detection and inconsistency analysis
+- Clear documentation for QA and development teams
+- Proper version control practices and professional project structure
+- Application of fundamental QA techniques on a real-world system
+
+## 🧩 Key Points
+- Scalable and modular test framework
+- Full validation of the name field across multiple scenarios
+- Coverage of limits, formats, missing parameters, and error handling
+- Demonstrated technical judgment in identifying backend functional gaps
 
 ## Conclusion
-This repository demonstrates QA skills in API automation testing, covering both positive and negative scenarios. It's a solid example of professional test design, assertion handling, and documentation for GitHub portfolios.
-
-Contributions to improve backend validation coverage or add more test cases are welcome!
+This project showcases my ability to design, automate, and document API tests from scratch.
+I applied core QA techniques, performed requirement analysis, and built a clean, professional repository.
+It reflects my technical growth as a QA Engineer Junior, with strong focus on quality, precision, and professional standards.
 
 ---
 
@@ -90,5 +100,20 @@ Contributions to improve backend validation coverage or add more test cases are 
 - Run all tests with pytest:
   ```sh
    pytest
-    ```
+
+  
+ 
+##
+Thank you for taking the time to review this project. This work reflects my ability to analyze requirements, detect backend inconsistencies, design structured test scenarios, and build reliable API automation from the ground up. I am ready to apply this level of technical rigor, problem-solving, and QA discipline in real engineering environments.
+If you’re looking for a QA professional who combines critical thinking, test strategy, and hands-on automation skills, I’d be glad to discuss how I can contribute to your team or upcoming projects. Feel free to connect with me through the links below.
+
+
+
+Professional Contacts
+<div align="left">
+  <a href=https://www.linkedin.com/in/maximiliano-fuentes-morales-qa/><img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="32" height="20" alt="linkedin logo"  /></a>
+  <a href=https://discordapp.com/users/maximilian_21./><img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/discord/default.svg" width="32" height="20" alt="discord logo"  /></a>
+  <a href=maximiliano.fuentes.mor@gmail.com><img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="32" height="20" alt="gmail logo"  />
+</div>
+    
 
